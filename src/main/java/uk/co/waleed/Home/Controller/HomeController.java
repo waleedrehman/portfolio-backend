@@ -9,7 +9,7 @@ public class HomeController{
 
     @RequestMapping("/")
     @ResponseBody
-    public String handleError() {
+    public String home() {
         return String.format("<center><h1>Welcome to Portfolio Backend</h1>"
                         + "To be continued");
     }
