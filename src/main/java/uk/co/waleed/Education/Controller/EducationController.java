@@ -18,18 +18,13 @@ import uk.co.waleed.Education.Model.EducationDTO;
 @Controller
 @RequestMapping(path = "/getEducation")
 public class EducationController{
+
+    @Autowired
     private EducationRepository educationRepository;
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<EducationDTO> getAllUsers() {
         // This returns a JSON or XML with the users
         return educationRepository.findAll();
-    }
-
-    @RequestMapping("/getEducation")
-    @ResponseBody
-    public String getEducation() {
-        return String.format("<center><h1>Welcome to Portfolio Backend</h1>"
-                + "To be continued");
     }
 }
