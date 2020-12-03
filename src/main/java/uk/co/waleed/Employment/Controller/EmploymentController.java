@@ -1,26 +1,26 @@
-package uk.co.waleed.Education.Controller;
+package uk.co.waleed.Employment.Controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import uk.co.waleed.Education.Interface.EducationRepository;
-import uk.co.waleed.Education.Model.EducationDTO;
+import uk.co.waleed.Employment.Interface.EmploymentRepository;
+import uk.co.waleed.Employment.Model.EmploymentDTO;
 
 
 @RestController
 @Controller
-@RequestMapping(path = "/getEducation")
+@RequestMapping(path = "/getEmployment")
 @CrossOrigin(origins = "*")
-public class EducationController{
+public class EmploymentController {
 
     @Autowired
-    private EducationRepository educationRepository;
+    private EmploymentRepository employmentRepository;
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<EducationDTO> getAllUsers() {
+    public @ResponseBody Iterable<EmploymentDTO> getAllUsers() {
         // This returns a JSON or XML with the users
-        return educationRepository.findAll();
+        return employmentRepository.findAll();
     }
 }

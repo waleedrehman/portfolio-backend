@@ -1,4 +1,4 @@
-package uk.co.waleed.Education.Model;
+package uk.co.waleed.Employment.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "education")
-public class EducationDTO {
+@Table(name = "employment")
+public class EmploymentDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String coursetitle;
+    private String jobtitle;
 
     private String datefromto;
 
-    private String institution;
+    private String company;
 
     private String description;
 
@@ -30,28 +30,28 @@ public class EducationDTO {
         this.id = id;
     }
 
-    public String getCourseTitle() {
-        return coursetitle;
+    public String getJobTitle() {
+        return jobtitle;
     }
 
-    public void setCourseTitle(String courseTitle) {
-        this.coursetitle = courseTitle;
+    public void setJobTitle(String jobtitle) {
+        this.jobtitle = jobtitle;
     }
 
     public String getDateFromTo() {
         return datefromto;
     }
 
-    public void setDateFromTo(String dateFromTo) {
-        this.datefromto = dateFromTo;
+    public void setDateFromTo(String datefromto) {
+        this.datefromto = datefromto;
     }
 
-    public String getInstitution() {
-        return institution;
+    public String getCompany() {
+        return company;
     }
 
-    public void setInstitution(String institution) {
-        this.institution = institution;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     public String getDescription() {
