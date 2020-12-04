@@ -1,5 +1,6 @@
 package uk.co.waleed.Employment.Controller;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,6 @@ public class EmploymentController {
     @GetMapping(path="/all")
     public @ResponseBody Iterable<EmploymentDTO> getAllUsers() {
         // This returns a JSON or XML with the users
-        return employmentRepository.findAll();
+        return employmentRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
 }
