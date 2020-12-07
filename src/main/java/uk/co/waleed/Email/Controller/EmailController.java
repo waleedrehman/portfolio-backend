@@ -3,18 +3,21 @@ package uk.co.waleed.Email.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Controller
+@CrossOrigin(origins = "*")
 public class EmailController{
 
     //https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/integration.html#mail
     @Autowired
     private JavaMailSender javaMailSender;
 
+    @CrossOrigin(origins = "*")
     @RequestMapping("/sendEmail")
     @ResponseBody
-    @CrossOrigin(origins = "*")
     public String email(@RequestParam(value="subject") String subject,
                         @RequestParam(value="name") String name,
                         @RequestParam(value="email") String email,
