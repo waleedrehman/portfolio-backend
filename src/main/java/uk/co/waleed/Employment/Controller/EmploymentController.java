@@ -19,7 +19,7 @@ public class EmploymentController {
     @Autowired
     private EmploymentRepository employmentRepository;
 
-    @GetMapping(path="/all")
+    @GetMapping(path="/")
     public @ResponseBody Iterable<EmploymentDTO> getAllUsers() {
         // This returns a JSON or XML with the users
         return employmentRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));

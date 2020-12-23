@@ -18,7 +18,7 @@ public class EducationController{
     @Autowired
     private EducationRepository educationRepository;
 
-    @GetMapping(path="/all")
+    @GetMapping(path="/")
     public @ResponseBody Iterable<EducationDTO> getAllUsers() {
         // This returns a JSON or XML with the users
         return educationRepository.findAll();
