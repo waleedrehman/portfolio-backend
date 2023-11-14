@@ -5,7 +5,7 @@
 
     <groupId>uk.co.waleed</groupId>
     <artifactId>portfolio-backend</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <packaging>war</packaging>
     <name>portfolio-backend</name>
 
